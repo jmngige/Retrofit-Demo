@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RetrofitDemo">
         <activity
+            android:name=".views.EditActivity"
+            android:exported="false" />
+        <activity
             android:name=".views.DetailActivity"
             android:exported="false" />
         <activity

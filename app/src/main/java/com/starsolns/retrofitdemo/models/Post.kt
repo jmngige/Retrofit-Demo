@@ -3,8 +3,8 @@ package com.starsolns.retrofitdemo.models
 import java.io.Serializable
 
 data class Post(
-    val body: String,
     val id: Int,
-    val title: String,
-    val userId: Int
-)
+    val userId: Int,
+    val body: String,
+    val title: String
+): Serializable

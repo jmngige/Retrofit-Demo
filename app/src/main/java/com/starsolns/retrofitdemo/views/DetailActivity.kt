@@ -1,9 +1,12 @@
 package com.starsolns.retrofitdemo.views
 
+import android.content.Intent
 import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -12,6 +15,7 @@ import com.starsolns.retrofitdemo.databinding.ActivityDetailBinding
 import com.starsolns.retrofitdemo.utils.DetailViewModel
 
 private const val TAG = "DetailActivity"
+const val EXTRA_POST="Extra_post"
 class DetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailBinding
@@ -48,5 +52,23 @@ class DetailActivity : AppCompatActivity() {
 
         viewModel.getPostDetails(postId)
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.edit_item, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.edit_post -> {
+               viewModel.post.observe(this, Observer { post->
+                   val intent = Intent(this, EditActivity::class.java)
+                   intent.putExtra(EXTRA_POST, post)
+                   startActivity(intent)
+               })
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/user/AndroidStudioProjects/RetrofitDemo/app/src/main/res/layout/activity_detail.xml" value="0.209375" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/RetrofitDemo/app/src/main/res/layout/activity_edit.xml" value="0.209375" />
         <entry key="..\:/Users/user/AndroidStudioProjects/RetrofitDemo/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/user/AndroidStudioProjects/RetrofitDemo/app/src/main/res/layout/list_item.xml" value="0.22" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/RetrofitDemo/app/src/main/res/menu/edit_item.xml" value="0.209375" />
       </map>
     </option>
   </component>
